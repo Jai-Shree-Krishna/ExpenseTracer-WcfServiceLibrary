@@ -8,11 +8,8 @@ using System.Threading.Tasks;
 namespace ExpenseTracer_WcfServiceLibrary.Model
 {
     [DataContract]
-    class Category
+    public class Category
     {
-        [DataMember]
-        public int CategoryId { get; set; }
-
         [DataMember]
         public string CategoryName { get; set; }
 

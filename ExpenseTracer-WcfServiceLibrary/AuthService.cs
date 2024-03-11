@@ -11,13 +11,14 @@ namespace ExpenseTracer_WcfServiceLibrary
 {
     public class AuthService : IAuthService
     {
-        string connectionString = @"Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ExpenseTracker;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        //string connectionString = @"Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ExpenseTracker;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ExpenseTracker;Integrated Security=True;Connect Timeout=30000;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         int IAuthService.SignIn(string email, string password)
         {
             int userId = -1;
 
             SqlConnection connection = new SqlConnection(connectionString);
-            string query = "SELECT Id FROM User WHERE EmailId = @Email AND Password = @Password";
+            string query = "SELECT Id FROM [User] WHERE EmailId = @Email AND Password = @Password";
 
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@Email", email);
@@ -38,7 +39,7 @@ namespace ExpenseTracer_WcfServiceLibrary
 
         DataSet IAuthService.GetAllUser()
         {
-            SqlDataAdapter da = new SqlDataAdapter("select id, emailid, password, username from user", connectionString);
+            SqlDataAdapter da = new SqlDataAdapter("Select Id, EmailId, Password, UserName from [User]", connectionString);
             
             DataSet ds = new DataSet();
 
@@ -56,7 +57,7 @@ namespace ExpenseTracer_WcfServiceLibrary
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "INSERT INTO User (EmailId, Password, Username) OUTPUT INSERTED.UserId VALUES (@Email, @Password, @Username)";
+                string query = "INSERT INTO [User] (EmailId, Password, Username) OUTPUT INSERTED.Id VALUES (@Email, @Password, @Username)";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Email", email);

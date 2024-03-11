@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="1ffbf5d7-5994-4067-8b50-066167705d72" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/ExpenseTracer_WcfServiceLibrary/CategoryService/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="6481506d-751d-42e5-8c9f-6ccfcc3319d6" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ExpenseTracer_WcfServiceLibrary/CategoryService/?xsd=xsd0" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="db822a7b-32c6-4b0e-b30e-a09d45e69faa" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ExpenseTracer_WcfServiceLibrary/CategoryService/?xsd=xsd1" />
+    <MetadataFile FileName="CategoryService.wsdl" MetadataType="Wsdl" ID="fd158b2d-ab9a-4638-8d49-07b4b11bab8f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ExpenseTracer_WcfServiceLibrary/CategoryService/?wsdl" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="4ace8286-73db-4723-9cc5-220454981f8a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ExpenseTracer_WcfServiceLibrary/CategoryService/?disco" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="1a0f382a-fe53-410c-bab0-5de0c4dd95c1" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ExpenseTracer_WcfServiceLibrary/CategoryService/?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

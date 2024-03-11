@@ -45,7 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthService.cs" />
+    <Compile Include="CategoryService .cs" />
+    <Compile Include="ExpenseService.cs" />
     <Compile Include="IAuthService.cs" />
+    <Compile Include="ICategoryService.cs" />
+    <Compile Include="IExpenseService.cs" />
     <Compile Include="IService1.cs" />
     <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Expense.cs" />

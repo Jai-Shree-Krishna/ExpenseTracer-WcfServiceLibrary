@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ExpenseTracer_WcfServiceLibrary.Model
 {
 	[DataContract]
-	class Expense
+	public class Expense
     {
 		[DataMember]
 		public int Id { get; set; }
