@@ -12,7 +12,7 @@ namespace ExpenseTracer_WcfServiceLibrary
     {
         string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ExpenseTracker;Integrated Security=True;Connect Timeout=30000;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
-        bool IExpenseService.AddExpense(float amount, string category, string description, int userId, string paymentMethod)
+        public bool AddExpense(float amount, string category, string description, int userId, string paymentMethod)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -32,7 +32,7 @@ namespace ExpenseTracer_WcfServiceLibrary
             }
         }
 
-        DataSet GetAllExpenses()
+        public DataSet GetAllExpenses()
         {
             DataSet dataSet = new DataSet();
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -45,7 +45,7 @@ namespace ExpenseTracer_WcfServiceLibrary
             return dataSet;
         }
 
-        DataSet GetExpensesByUserId(int userId)
+        public DataSet GetExpensesByUserId(int userId)
         {
             DataSet dataSet = new DataSet();
             using (SqlConnection connection = new SqlConnection(connectionString))
